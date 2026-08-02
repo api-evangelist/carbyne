@@ -1,0 +1,69 @@
+generated: '2026-08-02'
+method: searched
+probe: true
+source: https://carbyne.com/cloud-advantage/cloud-security/
+url: https://carbyne.com/cloud-advantage/cloud-security/
+kind: security-and-compliance-page
+note: Carbyne publishes no dedicated trust portal (trust.carbyne.com and carbyne.com/trust
+  both fail to resolve / 404). The Cloud Security page under Cloud Advantage is the
+  published security and compliance posture, naming certifications, controls and policy
+  areas. SOC 2 reports are request-only via a sales contact.
+certifications:
+- name: ISO/IEC 27001:2013
+  scope: Information Security Management System covering infrastructure, datacenters
+    and services
+- name: ISO/IEC 27017
+  scope: Cloud-specific information security controls
+- name: SOC 2 Type II
+  scope: Audited annually by independent auditors; report available on request via
+    Carbyne sales contact
+  report_access: on-request
+- name: HIPAA / HITECH
+  scope: Safeguards for Protected Health Information; Business Associate Agreements
+    available
+- name: CSA STAR (CAIQ) Level 1
+  scope: Cloud Security Alliance Consensus Assessments Initiative Questionnaire across
+    16 domains
+hosting:
+  provider: Amazon Web Services
+  government_cloud: AWS GovCloud
+  well_architected_review: true
+controls:
+  encryption_at_rest: AES-256
+  encryption_in_transit: TLS v1.2
+  password_storage: hashed and salted
+  mfa: true
+  rbac: true
+  sso: true
+  ids: OSSEC host-based intrusion detection
+  network: default deny-all cloud firewall; private subnets; per-customer VPC for single-tenant
+    deployments
+  endpoint: MDM + EDR with full-disk encryption on company workstations
+vulnerability_management:
+  application_security_testing: OWASP Top 10 tooling plus third-party review of design,
+    code and implementation
+  penetration_testing: periodic third-party pen tests in sandbox and production environments,
+    organized in consultation with customers
+  external_disclosure_program: false
+  note: No public vulnerability disclosure policy, security.txt or bug bounty program
+    was found; see security/carbyne-vulnerability-disclosure absence recorded in well-known/carbyne-well-known.yml
+security_policies:
+- Access Management
+- Change Management
+- Data Request
+- Data Management
+- Information Security
+- Incident Response
+- Policy Management and Maintenance
+- Risk Management
+- Vendor Management
+- Vulnerability Management
+availability:
+  uptime_claim: 99.999%
+  failover: multi-availability-zone and multi-region architecture
+  monitoring: 24/7 operations team with email and SMS alerting
+x-evidence:
+  fetched: '2026-08-02'
+  url: https://carbyne.com/cloud-advantage/cloud-security/
+  http_status: 200
+  content_type: text/html

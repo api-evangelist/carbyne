@@ -1,0 +1,51 @@
+generated: '2026-08-02'
+method: searched
+source: https://carbyne.com/legal/
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: No public API versioning policy was found. Carbyne publishes no developer portal
+    or API reference from which a version scheme could be read.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No deprecation or sunset policy published. The API Terms of Use reserve the
+    right to "change, suspend or discontinue the APIs ... at any time and for any reason,
+    without notice" (section 6.1), which is the only lifecycle commitment found.
+  source: https://carbyne.com/wp-content/uploads/2023/03/Carbyne-API-Terms-of-Use.final_.3.23.23.pdf
+sla:
+  published: true
+  documents:
+  - name: Axon 911 Support Terms and Service Level Agreement (US-LATAM, May 2026 v1.00)
+    url: https://carbyne.com/wp-content/uploads/2026/05/External-Axon911-Support-Terms-Service-Level-Agreement-Support-Terms-May-2026-v1.00-US-LATAM-EN.pdf
+    status: 200
+  - name: Support Terms and Service Level Agreement (Rest of World, January 2026 v2.22,
+      English)
+    url: https://carbyne.com/wp-content/uploads/2026/01/External-Support-Terms-Service-Level-Agreement-Support-Terms-January-2026-v2.22-RoW-EN.pdf
+  - name: Support Terms and Service Level Agreement (Rest of World, January 2026 v2.22,
+      Spanish)
+    url: https://carbyne.com/wp-content/uploads/2026/01/Spanish-Support-Terms-Service-Level-Agreement-Support-Terms-January-2026-v2.22-RoW-_SPA.pdf
+  uptime_target: 99.999%
+  uptime_source: https://carbyne.com/cloud-advantage/cloud-security/
+  api_support: 'API Terms of Use section 9.4: no support is available for the APIs
+    unless separately contracted; contracted customers get API support at their contracted
+    level.'
+status_page:
+  published: false
+  probed:
+  - {url: 'https://status.carbyne.com/', result: NXDOMAIN}
+  - {url: 'https://carbyne.com/status/', result: '404'}
+  note: No public status page found. Availability is asserted on the Cloud Security
+    page (99.999% uptime) rather than via a live status surface.
+changelog:
+  published: false
+  note: No public dated changelog or release-notes page found. The customer portal
+    (carbyne.zendesk.com) is Cloudflare-gated to anonymous clients (HTTP 403), so any
+    release notes there are not publicly readable.
+programs:
+- name: Pilot Terms and Conditions
+  url: https://carbyne.com/wp-content/uploads/2022/09/Carbyne-Pilot-Terms-and-Conditions_2022.08.pdf
+- name: Early Access Terms and Conditions
+  url: https://carbyne.com/wp-content/uploads/2023/06/Early-Access-Terms-and-Conditions-2023.06.14.pdf
+deprecated_operations: []

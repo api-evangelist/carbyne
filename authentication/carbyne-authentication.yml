@@ -1,0 +1,58 @@
+generated: '2026-08-02'
+method: searched
+source: https://carbyne.com/cloud-advantage/cloud-security/
+docs: https://carbyne.com/cloud-advantage/cloud-security/
+scope: platform
+note: Derived nothing from OpenAPI — Carbyne publishes no machine-readable API contract.
+  This profile records the authentication model Carbyne documents publicly for its
+  platform (Authentication / Universal Login section of the Cloud Security page). API
+  credentials themselves are provisioned under contract; see the published API Terms
+  of Use.
+summary:
+  types:
+  - oauth2
+  - saml2
+  - password
+  - sso
+  mfa: true
+  authorization_model: role-based
+  per_account_toggle: true
+schemes:
+- name: SAML
+  type: saml2
+  description: SAML-based single sign-on federation with the customer agency's identity
+    provider.
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- name: OAuth
+  type: oauth2
+  description: OAuth is listed among the supported authentication methods. No public
+    authorization or token endpoint, flow, or scope reference is published; /.well-known/oauth-authorization-server
+    returns 404 on carbyne.com.
+  flows: []
+  scopes_published: false
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- name: Password
+  type: http
+  scheme: basic
+  description: Username and password login, with optional two-factor authentication
+    (2FA) at sign-in.
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- name: SSO
+  type: sso
+  description: Single Sign-On across Carbyne applications within a session; authentication
+    methods can be individually enabled or disabled per account.
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+authorization:
+  model: role-based
+  description: Role-Based Authorization assigns access to specific individuals for
+    different types of business transactions.
+mfa:
+  supported: true
+  description: Multi-Factor Authentication restricts access to authorized individuals;
+    2FA available for username/password users.
+api_access:
+  public_self_service: false
+  terms: https://carbyne.com/wp-content/uploads/2023/03/Carbyne-API-Terms-of-Use.final_.3.23.23.pdf
+  description: API access is granted under Carbyne's API Terms of Use to contracted
+    customers and partners. No public developer portal, key issuance flow, or authentication
+    reference for the API was found.

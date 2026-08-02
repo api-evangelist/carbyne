@@ -1,0 +1,48 @@
+generated: '2026-08-02'
+method: probed
+source: live HTTP probes, 2026-08-02
+summary:
+  documents_found: 0
+  note: No /.well-known/ discovery document is served on any resolvable Carbyne host.
+    Recorded as a negative result — no WellKnown or SecurityTxt pointer is wired in
+    apis.yml because nothing was found.
+hosts:
+- host: https://carbyne.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+  - {path: /openapi.json, status: 404}
+  - {path: /sitemap.xml, status: 404}
+  - {path: /robots.txt, status: 200}
+- host: https://chat.carbyne.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /openapi.json, status: 404}
+  - {path: /swagger.json, status: 404}
+rejected_hosts:
+- host: https://ops.carbyne.com
+  reason: Rebrandly link-shortener catch-all. Answers HTTP 200 with an HTML body for
+    every path including /.well-known/agent-card.json, /.well-known/agent.json, /openapi.json,
+    /swagger.json and /api-docs. All 200s rejected as false positives.
+- host: https://carbyne.io
+  reason: Parked domain unrelated to the Carbyne product surface. Serves an HTML redirect
+    shell to /lander for every path, returning 200 for every /.well-known/* and spec
+    path probed. All 200s rejected as false positives.
+- host: https://carbyne.gitbook.io
+  reason: GitBook space exists (org YHxWphjACIkfyy41b61n, space -M8Vw_O1a_zneE2l3c4i)
+    but is not published publicly — every path redirects to app.gitbook.com and the
+    GitBook API returns 403 "requires authentication". Contents not readable anonymously.
+- host: https://carbyne.readme.io
+  reason: 404 — no ReadMe developer hub claimed.
+- host: https://carbyne.zendesk.com
+  reason: Customer Portal help center is Cloudflare-challenged for anonymous clients
+    (HTTP 403).

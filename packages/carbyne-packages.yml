@@ -1,0 +1,37 @@
+generated: '2026-08-02'
+method: searched
+source: npm registry search, PyPI, GitHub org github.com/carbyne911
+summary:
+  first_party_api_sdks: 0
+  note: Carbyne publishes no first-party client library for its API on any public registry.
+    The one Carbyne-scoped package found on npm is a vendored fork of a third-party
+    SIP library used by its web client, not an API SDK.
+registries_probed:
+- {registry: npm, query: carbyne, result: no first-party Carbyne API SDK}
+- {registry: npm, query: 'scope:carbyne', result: 'scope exists; @carbyne/sip.js only'}
+- {registry: pypi, query: carbyne, result: 404}
+- {registry: pkg.go.dev, query: carbyne, result: none}
+- {registry: rubygems, query: carbyne, result: none}
+- {registry: packagist, query: carbyne, result: none}
+- {registry: crates.io, query: carbyne, result: none}
+packages:
+- language: javascript
+  registry: npm
+  name: '@carbyne/sip.js'
+  url: https://www.npmjs.com/package/@carbyne/sip.js
+  install: npm install @carbyne/sip.js
+  version: 0.21.2-2
+  last_published: '2024-09-23'
+  official: true
+  api_sdk: false
+  note: Carbyne-scoped republish of onsip/SIP.js (upstream repository https://github.com/onsip/SIP.js,
+    homepage sipjs.com). A SIP signaling library vendored for Carbyne's WebRTC call
+    path — it is not a client for a Carbyne API.
+source_code:
+- name: carbyne911
+  url: https://github.com/carbyne911
+  public_repos: 17
+  note: Mostly forks of VoIP/media infrastructure (drachtio-siprec-recording-server,
+    oreka, SIP.js, gst-plugins-good, WGWService). Two non-forks are C/C++ media components
+    — RTSPSink (GStreamer RTSP sink plugin) and MGWService (media gateway service).
+    No SDK, no OpenAPI, no protobuf published in the org.

@@ -1,17 +1,35 @@
 aid: carbyne
 name: Carbyne
-description: 'Carbyne is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Carbyne is a cloud-native mission-critical contact center and emergency
+  communications company whose platform — sold as Axon 911 Core and Carbyne APEX —
+  powers 9-1-1, 3-1-1 and non-emergency call handling for Public Safety Answering Points
+  (PSAPs), enterprises, and transportation, education and GSOC operators. The platform
+  delivers caller device location, live video, audio streaming, Text-to-911, AI transcription
+  and real-time translation, emergency call triage, wallboards, analytics and event
+  history to telecommunicators, and integrates with CAD, ESInet, voice recorders, PBX,
+  mapping and IoT systems through a contract-gated open API governed by published API
+  Terms of Use. Founded in 2015 in Tel Aviv and New York as Reporty Homeland Security,
+  Carbyne operates roughly 300 emergency response centers worldwide and was acquired
+  by Axon Enterprise in 2025.'
 url: https://raw.githubusercontent.com/api-evangelist/carbyne/refs/heads/main/apis.yml
+image: https://carbyne.com/wp-content/uploads/2024/03/Mission-Critical-Contact-Centers.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Emergency Services
+- Public Safety
+- Communications
+- Telecommunications
+- NG911
+- Contact Center
+- Location
+- Video
+- Government
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,72 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/carbyne_stock/
+  url: https://carbyne.com/
+- type: About
+  url: https://carbyne.com/company/about-us/
+- type: Blog
+  url: https://carbyne.com/blogs/
+- type: BlogRSS
+  url: https://carbyne.com/feed/
+- type: Press
+  url: https://carbyne.com/resources/press/
+- type: Support
+  url: https://carbyne.com/contact/
+- type: HelpCenter
+  name: Customer Portal
+  url: https://carbyne.zendesk.com/hc/en-us/
+- type: Partners
+  url: https://carbyne.com/partners/
+- type: Integrations
+  url: https://carbyne.com/cloud-advantage/carbyne-integrations/
+- type: GitHubOrganization
+  url: https://github.com/carbyne911
+- type: TermsOfService
+  url: https://carbyne.com/terms-of-use/
+- type: TermsOfService
+  name: API Terms of Use
+  url: https://carbyne.com/wp-content/uploads/2023/03/Carbyne-API-Terms-of-Use.final_.3.23.23.pdf
+- type: PrivacyPolicy
+  url: https://carbyne.com/privacy-policy/
+- type: Legal
+  url: https://carbyne.com/legal/
+- type: Compliance
+  url: https://carbyne.com/cloud-advantage/cloud-security/
+- type: TrustCenter
+  url: security/carbyne-trust-center.yml
+- type: Conformance
+  url: conformance/carbyne-conformance.yml
+- type: Authentication
+  url: authentication/carbyne-authentication.yml
+- type: DomainSecurity
+  url: security/carbyne-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/carbyne-lifecycle.yml
+- type: SLA
+  url: https://carbyne.com/wp-content/uploads/2026/05/External-Axon911-Support-Terms-Service-Level-Agreement-Support-Terms-May-2026-v1.00-US-LATAM-EN.pdf
+- type: Packages
+  url: packages/carbyne-packages.yml
+- type: LLMsTxt
+  url: llms/carbyne-llms.txt
+- type: LinkedIn
+  url: https://www.linkedin.com/company/carbyne
+- type: Twitter
+  url: https://twitter.com/carbyne911
+- type: Careers
+  url: https://www.axon.com/careers
+- type: Investors
+  url: https://carbyne.com/company/investors/
+- type: AIPrinciples
+  url: https://carbyne.com/carbyne-ai-principles/
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
+x-api-surface:
+  public_machine_readable_contract: false
+  discovery_log: well-known/carbyne-well-known.yml
+  note: Carbyne runs a contract-gated API program (published API Terms of Use) but
+    publishes no OpenAPI, GraphQL, AsyncAPI, MCP server or A2A agent card, and no public
+    developer portal, API reference or SDK. Probed 2026-08-02 across carbyne.com and
+    every resolvable subdomain from certificate transparency.

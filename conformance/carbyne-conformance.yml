@@ -1,0 +1,70 @@
+generated: '2026-08-02'
+method: searched
+source: https://carbyne.com/cloud-advantage/cloud-security/
+notes: 'Carbyne publishes no public machine-readable API contract, so no standard below
+  is asserted from a spec. Every conforms=true entry is backed by an explicit published
+  claim on Carbyne''s own site; everything else is recorded as unknown or false rather
+  than inferred.'
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: 'Cloud Security page: "Carbyne cloud service has been ISO 27001:2013"'
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: iso-27017
+  conforms: true
+  evidence: 'Cloud Security page: "We comply with ISO/IEC 27017"'
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: soc2-type-ii
+  conforms: true
+  evidence: audited annually against SOC 2 Type II by independent auditors; report
+    on request
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: hipaa-hitech
+  conforms: true
+  evidence: safeguards for PHI; Business Associate Agreements offered
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: csa-star-caiq-level-1
+  conforms: true
+  evidence: CSA STAR Level 1 across 16 Cloud Controls Matrix domains
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: owasp-top-10
+  conforms: true
+  evidence: 'all code tested for application security flaws "such as those described
+    by OWASP Top 10"'
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: oauth2
+  conforms: true
+  evidence: 'Cloud Security page lists supported authentication methods: "SAML, OAuth,
+    Password-based, and Single Sign-On (SSO)". No public OAuth metadata or scope reference
+    is published.'
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: saml2
+  conforms: true
+  evidence: SAML listed among supported authentication methods for SSO
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: tls-1-2
+  conforms: true
+  evidence: data in transit encrypted with TLS v1.2 (carbyne.com itself negotiates
+    TLSv1.3 — see security/carbyne-domain-security.yml)
+  source: https://carbyne.com/cloud-advantage/cloud-security/
+- id: openid-connect
+  conforms: unknown
+  evidence: no /.well-known/openid-configuration served on any resolvable Carbyne host
+    (404)
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on carbyne.com
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no public OpenAPI or error reference to evaluate
+- id: openapi
+  conforms: false
+  evidence: no OpenAPI/Swagger document found on any resolvable Carbyne host or docs
+    surface (see llms/carbyne-llms.txt discovery log)
+- id: asyncapi
+  conforms: false
+  evidence: no published event, streaming or webhook specification found
+- id: nena-i3-ng911
+  conforms: unknown
+  evidence: Carbyne markets NG911 / ESInet integration and Text-to-911, but no explicit
+    NENA i3 conformance or certification claim was found on the public site
