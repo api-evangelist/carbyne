@@ -15,7 +15,7 @@ url: https://raw.githubusercontent.com/api-evangelist/carbyne/refs/heads/main/ap
 image: https://carbyne.com/wp-content/uploads/2024/03/Mission-Critical-Contact-Centers.png
 x-type: company
 x-source: harvest:secondary-market
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-02'
 modified: '2026-08-02'
 tags:
