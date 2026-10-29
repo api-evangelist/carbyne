@@ -64,27 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Carbyne is a cloud-native mission-critical contact center and emergency communications company whose platform — sold as Axon 911 Core and Carbyne APEX — powers 9-1-1, 3-1-1 and non-emergency call handling for Public Safety Answering Points (PSAPs), enterprises, and transportation, education and GSOC operators. The platform delivers caller device location, live video, audio streaming, Text-to-911, AI transcription and real-time translation, emergency call triage, wallboards, analytics and event history to telecommunicators, and integrates with CAD, ESInet, voice recorders, PBX, mapping and IoT systems through a contract-gated open API. Founded in 2015 in Tel Aviv and New York as Reporty Homeland Security, Carbyne was acquired by Axon Enterprise in 2025.
+Carbyne is a cloud-native mission-critical contact center and emergency communications company whose platform — sold as Axon 911 Core and Carbyne APEX — powers 9-1-1, 3-1-1 and non-emergency call handling for Public Safety Answering Points (PSAPs), enterprises, and transportation, education and GSOC operators. The platform delivers caller device location, live video, audio streaming, Text-to-911, AI transcription and real-time translation, emergency call triage, wallboards, analytics and event history to telecommunicators, and integrates with CAD, ESInet, voice recorders, PBX, mapping and IoT systems through a contract-gated open API governed by published API Terms of Use. Founded in 2015 in Tel Aviv and New York as Reporty Homeland Security, Carbyne operates roughly 300 emergency response centers worldwide and was acquired by Axon Enterprise in 2025.
 
-- Website: https://carbyne.com/
-- Cloud Security & compliance: https://carbyne.com/cloud-advantage/cloud-security/
-- Integrations: https://carbyne.com/cloud-advantage/carbyne-integrations/
-- API Terms of Use: https://carbyne.com/wp-content/uploads/2023/03/Carbyne-API-Terms-of-Use.final_.3.23.23.pdf
-- GitHub: https://github.com/carbyne911
+**Areas:** Company · Emergency Services · Public Safety · Communications · Telecommunications · NG911 · Contact Center · Location · Video · Government · Artificial Intelligence
 
-## API surface
+## Carbyne on APIs.io
 
-Carbyne markets an open API and publishes API Terms of Use, but as of 2026-08-02 it publishes **no public machine-readable API contract** — no OpenAPI, GraphQL, AsyncAPI, gRPC, MCP server or A2A agent card — and no public developer portal, API reference or SDK. API access is granted to contracted customers and partners. The full discovery log, including hosts rejected as catch-all false positives, is in `well-known/carbyne-well-known.yml`.
+Everything profiled for Carbyne is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/carbyne/](https://apis.io/providers/carbyne/)** — or go straight to one of the APIs or properties below.
 
-## Artifacts
+### Published properties
 
-| Directory | File | Method |
-|---|---|---|
-| `authentication/` | `carbyne-authentication.yml` | searched |
-| `conformance/` | `carbyne-conformance.yml` | searched |
-| `lifecycle/` | `carbyne-lifecycle.yml` | searched |
-| `packages/` | `carbyne-packages.yml` | searched |
-| `security/` | `carbyne-domain-security.yml` | probed |
-| `security/` | `carbyne-trust-center.yml` | searched |
-| `well-known/` | `carbyne-well-known.yml` | probed |
-| `llms/` | `carbyne-llms.txt` | generated |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Carbyne Authentication](https://apis.io/security/carbyne/carbyne-authentication/)
+- [Carbyne Domain Security](https://apis.io/security/carbyne/carbyne-domain-security/)
+- [Carbyne Trust Center](https://apis.io/security/carbyne/carbyne-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://carbyne.com/)
+- [Support](https://carbyne.com/contact/)
+- [Blog](https://carbyne.com/blogs/)
+- [Compliance](https://carbyne.com/cloud-advantage/cloud-security/)
+- [Terms of service](https://carbyne.com/terms-of-use/)
+- [Privacy policy](https://carbyne.com/privacy-policy/)
+- [GitHub](https://github.com/carbyne911)
+
+## API Evangelist rating
+
+**Kin Score 19.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 36.8 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.4** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/carbyne/](https://apis.io/providers/carbyne/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Carbyne: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/carbyne/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
